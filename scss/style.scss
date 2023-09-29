@@ -38,7 +38,7 @@ a {
 .dashboard__side-bar {
     position: fixed;
     height: 100%;
-    width: 21.3%;
+    width: 306px;
     padding: 37px 28px;
     background: #FFF;
     box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.50);
@@ -91,14 +91,23 @@ a {
                         display: flex;
                         align-items: center;
                         gap: 14px;
+                        img {
+                            width: 22px;
+                            padding: 2px;
+                            border: 2px solid rgba(145, 151, 179, 1);
+                            border-radius: 6px;
+                        }
                     }
                 }
                 &:hover {
                     background: #5932EA;
-                    svg:hover {
-                        color: white;
-                        fill: white;
-                        // fill: white;
+                    svg {
+                        transform: rotate(360deg);
+                        transition: all 1.5s ease;
+                    }
+                    img {
+                        transform: rotate(360deg);
+                        transition: all 1.5s ease;
                     }
                     span {
                         color: white;
@@ -165,6 +174,54 @@ a {
 }
 
 .dashboard__main {
+    padding-top: 41px;
     width: 74%;
     margin-left: auto;
+}
+
+@media screen and (max-width: 1250px) {
+    .dashboard__side-bar {
+        width: 300px;
+    }
+    .dashboard__main {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:875px) {
+    .dashboard__main {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:687px) {
+    .dashboard__side-bar {
+        width: 102px;
+        .dashboard__header {
+            span {
+                display: none;
+            }
+        }
+        .dashboard__menu {
+            span {
+                display: none;
+            }
+            .right-icon {
+                display: none;
+            }
+        }
+        .dashboard__footer {
+            .get-pro {
+                display: none;
+            }
+            .user {
+                .user-name {
+                    display: none;
+                }
+            }
+        }
+    }
+    .dashboard__main {
+        width: 70%;
+    }
 }
