@@ -557,6 +557,9 @@ a {
   .dashboard__side-bar .dashboard__header span {
     display: none;
   }
+  .dashboard__side-bar .dashboard__menu {
+    margin-bottom: 10px;
+  }
   .dashboard__side-bar .dashboard__menu span {
     display: none;
   }
